@@ -1,0 +1,4 @@
+*.pyc
+./core/*.pyc
+./core/*/*.pyc
+./utils/*.pyc
