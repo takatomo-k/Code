@@ -124,10 +124,8 @@ def build_save_in_shards_using_shards_size(src_corpus, tgt_corpus, fields,
             window=opt.window,
             image_channel_size=opt.image_channel_size
         )
-
         # We save fields in vocab.pt seperately, so make it empty.
         dataset.fields = []
-
         logger.info(" * saving %sth %s data shard to %s."
                     % (index, corpus_type, pt_file))
         torch.save(dataset, pt_file)

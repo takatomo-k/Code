@@ -192,7 +192,7 @@ def preprocess_opts(parser):
                        one word per line.""")
     group.add_argument('-features_vocabs_prefix', type=str, default='',
                        help="Path prefix to existing features vocabularies")
-    group.add_argument('-src_vocab_size', type=int, default=50000,
+    group.add_argument('-src_vocab_size', type=int, default=32,
                        help="Size of the source vocabulary")
     group.add_argument('-tgt_vocab_size', type=int, default=50000,
                        help="Size of the target vocabulary")
@@ -453,7 +453,7 @@ def translate_opts(parser):
 
     group = parser.add_argument_group('Data')
     group.add_argument('-data_type', default="text",
-                       help="Type of the source input. Options: [text|img|audio|custom].")
+                       help="Type of the source input. Options: [text|img].")
 
     group.add_argument('-src', required=True,
                        help="""Source sequence to decode (one line per
